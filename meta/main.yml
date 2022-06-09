@@ -1,0 +1,36 @@
+---
+galaxy_info:
+  role_name: terrascan
+  author: darkwizard242
+  description: Installs/Uninstalls 'terrascan'. Terrascan Detect compliance and security violations across IaC.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - focal
+        - bionic
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+        - stretch
+    - name: EL
+      versions:
+        - 8
+        - 7
+
+  galaxy_tags:
+    - terrascan
+    - terraform
+    - aws
+    - kubernetes
+    - docker
+    - helm
+    - kustomize
+    - security
+    - system
+    - os
