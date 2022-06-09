@@ -1,0 +1,13 @@
+---
+# tasks file for terrascan | Debian/Ubuntu Family
+
+- name: Debian/Ubuntu Family | Downloading and extracting {{ terrascan_app }} {{ terrascan_version }}
+  ansible.builtin.unarchive:
+    src: "{{ terrascan_dl_url }}"
+    dest: "{{ terrascan_bin_path }}"
+    extra_opts:
+      - "{{ terrascan_app }}"
+    remote_src: yes
+    owner: "{{ terrascan_file_owner }}"
+    group: "{{ terrascan_file_group }}"
+    mode: "{{ terrascan_file_permission_mode }}"
