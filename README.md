@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 terrascan_app: terrascan
-terrascan_version: 1.18.1
+terrascan_version: 1.18.2
 terrascan_os: Linux
 terrascan_arch: x86_64
 terrascan_dl_url: https://github.com/tenable/{{ terrascan_app }}/releases/download/v{{ terrascan_version }}/{{ terrascan_app }}_{{ terrascan_version }}_{{ terrascan_os }}_{{ terrascan_arch }}.tar.gz
@@ -31,7 +31,7 @@ terrascan_file_permission_mode: '0755'
 Variable                       | Description
 ------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------
 terrascan_app                  | Defines the app to install i.e. **terrascan**
-terrascan_version              | Defined to dynamically fetch the desired version to install. Defaults to: **1.18.1**
+terrascan_version              | Defined to dynamically fetch the desired version to install. Defaults to: **1.18.2**
 terrascan_os                   | Defines os type. Defaults to: **Linux**
 terrascan_arch                 | Defines os architecture. Defaults to: **x86_64**
 terrascan_dl_url               | Defines URL to download the terrascan binary from.
