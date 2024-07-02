@@ -17,9 +17,17 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 terrascan_app: terrascan
 terrascan_version: 1.19.1
-terrascan_os: Linux
-terrascan_arch: x86_64
-terrascan_dl_url: https://github.com/tenable/{{ terrascan_app }}/releases/download/v{{ terrascan_version }}/{{ terrascan_app }}_{{ terrascan_version }}_{{ terrascan_os }}_{{ terrascan_arch }}.tar.gz
+terrascan_os: "{{ ansible_system }}"
+terrascan_architecture_map:
+  amd64: x86_64
+  arm: arm64
+  x86_64: x86_64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "i386"
+  64-bit: x86_64
+terrascan_dl_url: https://github.com/tenable/{{ terrascan_app }}/releases/download/v{{ terrascan_version }}/{{ terrascan_app }}_{{ terrascan_version }}_{{ terrascan_os }}_{{ terrascan_architecture_map[ansible_architecture] }}.tar.gz
 terrascan_bin_path: /usr/local/bin
 terrascan_file_owner: root
 terrascan_file_group: root
@@ -32,8 +40,8 @@ Variable                       | Description
 ------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------
 terrascan_app                  | Defines the app to install i.e. **terrascan**
 terrascan_version              | Defined to dynamically fetch the desired version to install. Defaults to: **1.19.1**
-terrascan_os                   | Defines os type. Defaults to: **Linux**
-terrascan_arch                 | Defines os architecture. Defaults to: **x86_64**
+terrascan_os                   | Defines os type.
+terrascan_architecture_map     | Defines os architecture.
 terrascan_dl_url               | Defines URL to download the terrascan binary from.
 terrascan_bin_path             | Defined to dynamically set the appropriate path to store terrascan binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
 terrascan_file_owner           | Owner for the binary file of terrascan.
