@@ -2,7 +2,7 @@
 # defaults file for terrascan
 
 terrascan_app: terrascan
-terrascan_version: 1.19.8
+terrascan_version: 1.19.9
 terrascan_os: "{{ ansible_system }}"
 terrascan_architecture_map:
   amd64: x86_64

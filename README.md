@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 terrascan_app: terrascan
-terrascan_version: 1.19.8
+terrascan_version: 1.19.9
 terrascan_os: "{{ ansible_system }}"
 terrascan_architecture_map:
   amd64: x86_64
@@ -39,7 +39,7 @@ terrascan_file_permission_mode: '0755'
 Variable                       | Description
 ------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------
 terrascan_app                  | Defines the app to install i.e. **terrascan**
-terrascan_version              | Defined to dynamically fetch the desired version to install. Defaults to: **1.19.8**
+terrascan_version              | Defined to dynamically fetch the desired version to install. Defaults to: **1.19.9**
 terrascan_os                   | Defines os type.
 terrascan_architecture_map     | Defines os architecture.
 terrascan_dl_url               | Defines URL to download the terrascan binary from.
